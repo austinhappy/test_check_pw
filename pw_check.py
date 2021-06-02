@@ -3,12 +3,13 @@ n = 3
 
 while n > 0:
 	pw = input('enter the password:')
-	if pw == 'a123456':
+	n = n - 1
+	if pw == password:
 		print('password is correct')
 		break
-	elif n == 1:
-		print('no chance to login')
-		break
 	else:
-		n = n - 1
-		print('wrong password! %s chances remained' % n )
+		print('wrong password!')
+		if n > 0:	
+			print(' %s chances remained' % n )
+		else:
+			print('no chances remained')
